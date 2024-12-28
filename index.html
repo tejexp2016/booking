@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Colorful gradient background */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header .logo {
+            max-width: 200px; /* Increased logo size */
+            margin-bottom: 10px;
+        }
+
+        .header .name {
+            font-size: 28px; /* Larger company name */
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header .address {
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            max-width: 50%; /* Limit width to 50% */
+            margin: 5px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .dimension-fields {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .dimension-fields input {
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .dimension-fields select {
+            padding: 5px;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .actions button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+
+        .actions button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="Tej Express Services (1).png" alt="Company Logo">
+            <div class="name">Tej Express Services</div>
+            <div class="address">Company Address: Shree Ram Complex Gal G8 Bhiwandi Thane 421302</div>
+        </div>
+
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="awb">AWB Number:</label>
+                    <input type="text" id="awb" name="awb">
+                </div>
+                <div class="form-group">
+                    <label for="booking-date">Booking Date:</label>
+                    <input type="date" id="booking-date" name="booking-date">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="from">From:</label>
+                    <input type="text" id="from" name="from">
+                </div>
+                <div class="form-group">
+                    <label for="to">To:</label>
+                    <input type="text" id="to" name="to">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="shipper-name">Shipper Name:</label>
+                    <input type="text" id="shipper-name" name="shipper-name">
+                </div>
+                <div class="form-group">
+                    <label for="receiver-name">Receiver Name:</label>
+                    <input type="text" id="receiver-name" name="receiver-name">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="shipper-address">Shipper Address:</label>
+                    <textarea id="shipper-address" name="shipper-address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="receiver-address">Receiver Address:</label>
+                    <textarea id="receiver-address" name="receiver-address"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="shipper-pincode">Shipper Pincode:</label>
+                    <input type="text" id="shipper-pincode" name="shipper-pincode">
+                </div>
+                <div class="form-group">
+                    <label for="receiver-pincode">Receiver Pincode:</label>
+                    <input type="text" id="receiver-pincode" name="receiver-pincode">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="document">Document Select Point:</label>
+                    <select id="document" name="document">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mode">Mode:</label>
+                    <select id="mode" name="mode">
+                        <option value="air">Air</option>
+                        <option value="surface">Surface</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="invoice-no">Invoice Number:</label>
+                    <input type="text" id="invoice-no" name="invoice-no">
+                </div>
+                <div class="form-group">
+                    <label for="invoice-value">Invoice Value:</label>
+                    <input type="text" id="invoice-value" name="invoice-value">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="boxes">Number of Boxes:</label>
+                    <input type="number" id="boxes" name="boxes">
+                </div>
+                <div class="form-group">
+                    <label for="dimensions">Dimensions (Qty, L × W × H):</label>
+                    <div class="dimension-fields">
+                        <input type="number" id="qty" name="qty" placeholder="Qty">
+                        <input type="number" id="length" name="length" placeholder="L">
+                        <input type="number" id="width" name="width" placeholder="W">
+                        <input type="number" id="height" name="height" placeholder="H">
+                        <select id="unit" name="unit">
+                            <option value="cm">CM</option>
+                            <option value="in">IN</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button type="button" onclick="window.print()">Print</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
